@@ -1,0 +1,25 @@
+[{
+    "JobName": "Assembler",
+    "JobField": 1,
+    "ScopeOfHours": 8,
+    "Area": "Jerusalem",
+    "Requirements": "High work ethic, investment and dedication",
+    "WorkFromHome": true
+},
+{
+    "JobName": "sql QA",
+    "JobField": 2,
+    "ScopeOfHours": 9,
+    "Area": "Rannana",
+    "Requirements": "Skilled, at least 3 years of experience",
+    "WorkFromHome": false
+},
+{
+    "JobName": "DB",
+    "JobField": 0,
+    "ScopeOfHours": 5,
+    "Area": "Kefar Saba",
+    "Requirements": "High interpersonal communication and punctuality",
+    "WorkFromHome": false
+}
+]
