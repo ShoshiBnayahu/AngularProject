@@ -1,1 +1,16 @@
-[]
+[{
+    "Id": 0,
+    "UserName": "a",
+    "Password": "a",
+    "JobSearchField": 0
+}, {
+    "Id": 1,
+    "UserName": "b",
+    "Password": "b",
+    "JobSearchField": 1
+}, {
+    "Id": 2,
+    "UserName": "c",
+    "Password": "c",
+    "JobSearchField": 2
+}]

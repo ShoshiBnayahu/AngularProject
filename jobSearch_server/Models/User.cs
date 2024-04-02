@@ -13,6 +13,7 @@
         this.Password=password;
         this.JobSearchField=jobSearchField;
     }
+    
     }
    
     

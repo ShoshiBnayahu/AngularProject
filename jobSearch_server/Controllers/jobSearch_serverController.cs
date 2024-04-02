@@ -1,48 +1,65 @@
 using Microsoft.AspNetCore.Mvc;
 using jobSearch_server.Models;
 using System.Text.Json;
-using System.Collections.Generic;
-using System.Linq;
 using System.IO;
-using System;
-using System.Text.Json;
-using Microsoft.AspNetCore.Hosting;
+using System.Linq;
 namespace jobSearch_server.Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class jobSearch_serverController : ControllerBase
+public class JobSearchServerController : ControllerBase
 {
-     private IWebHostEnvironment webHost;
-    private string filePath;
-    private List<Job>? JobsList { get; }
 
-    public jobSearch_serverController(IWebHostEnvironment webHost)
+    private IWebHostEnvironment webHost;
+    private string jobsPath;
+    private List<Job>? jobsList { get; }
+    private string usersPath;
+    private List<User>? usersList { get; }
+    public JobSearchServerController(IWebHostEnvironment webHost)
     {
         this.webHost = webHost;
-        this.filePath = Path.Combine(webHost.ContentRootPath, "Data", "Jobs.json");
-        using (var jsonFile = File.OpenText(filePath))
+        this.jobsPath = Path.Combine(webHost.ContentRootPath, "Data", "Jobs.json");
+        this.usersPath=Path.Combine(webHost.ContentRootPath, "Data", "Users.json");
+        using (var jsonFile =  System.IO.File.OpenText(jobsPath))
         {
-            JobsList = JsonSerializer.Deserialize<List<Job>>(jsonFile.ReadToEnd(),
+            jobsList = JsonSerializer.Deserialize<List<Job>>(jsonFile.ReadToEnd(),
             new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true
             });
         }
-       
+        using (var jsonFile = System.IO.File.OpenText(usersPath))
+        {
+            usersList = JsonSerializer.Deserialize<List<User>>(jsonFile.ReadToEnd(),
+            new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+        }
+        foreach (User item in usersList)
+        {
+            System.Console.WriteLine(item.ToString());
+        }
     }
-          
 
-    [HttpGet(Name = "GetAllJobs")]
+
+
+    [HttpGet("GetAllJobs")]
     public ActionResult GetAllJobs()
     {
-      return Ok(JobsList);
+        return Ok(jobsList);
     }
 
+    [HttpGet("GetUserDetails")]
+    public ActionResult GetUser( string userName,string password)
+    {      
+       
+        User? user =usersList?.FirstOrDefault(u=>u?.UserName==userName && u?.Password==password);
+        System.Console.WriteLine(   user);
+        return Ok(user);
 
-  
+    }
+
+   
 }
 
-
-
-       
