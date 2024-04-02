@@ -1,0 +1,14 @@
+<form #f=ngForm>
+    <div>
+        <label >שם משתמש</label>
+        <input  type="text" #name="ngModel" [(ngModel)]="userData.username" name="username" required="true" > 
+        <label  *ngIf="!name.valid && f.submitted" class="error">*יש להזין שם</label> 
+    </div>
+    <label ></label>
+    <div>
+        <label>סיסמה</label>
+        <input type="password" #password="ngModel" [(ngModel)]="userData.password" name="password"  required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}" >
+        <label  *ngIf="!password.valid&&f.submitted" class="error">הסיסמא חייב להכיל לפחות אות קטנה אחת, אות גדולה אחת ומספר אחד. 8 תווים</label> 
+    </div>
+    <button  type="submit" (click)="loginClick()">כניסה</button>
+</form>
