@@ -10,5 +10,5 @@
         <input type="password" #password="ngModel" [(ngModel)]="userData.password" name="password"  required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}" >
         <label  *ngIf="!password.valid&&f.submitted" class="error">הסיסמא חייב להכיל לפחות אות קטנה אחת, אות גדולה אחת ומספר אחד. 8 תווים</label> 
     </div>
-    <button  type="submit" (click)="loginClick()">כניסה</button>
+    <button   type="submit" (click)="loginClick()">כניסה</button>
 </form>
