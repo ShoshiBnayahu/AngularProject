@@ -18,6 +18,8 @@ export class HomeComponent {
 
   getField() {
     if (this.currentUser) {
+      console.log(this.currentUser.cVsSentsAmount);
+      
       return Field[this.currentUser.jobSearchField].toLowerCase()
     }
     return '';
@@ -33,26 +35,6 @@ export class HomeComponent {
 
   }
 
-
-
-
-  //   <p>home works!</p>
-  // הקומפוננטה מכילה את הheader וה footer של האתר.
-  // למעלה יוצג:
-  // header
-  // •👤	שם המשתמש המחובר למערכת
-
-  // •🎯	תחום המשרה שהוא מחפש – קישור, בלחיצה עליו יעברו לרשימת המשרות מסוננת לפי תחום זה.
-  // אם המשתמש מנסה להיכנס לדף הזה מבלי שביצע לוגין קודם (ה localStorage  ריק) הוא יועבר לדף הלוגין.
-
-  // •👌🏻	כמות הקו"ח שכבר שלח דרך המערכת.
-  // •	לוגו של האתר שבלחיצה עליו ינווטו לדף הלוגין.
-
-
-  // footer
-  // 👨🏻‍💼 למטה יוצגו פרטי יצירת קשר עם מנהל האתר.
-  // gmail 📧
-  // phone 📞
 
 
 

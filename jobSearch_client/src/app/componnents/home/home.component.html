@@ -11,7 +11,7 @@
                 <button class="nav-link" (click)="positionOnclick()">🎯 {{getField()|| 'positions'}}</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link">👌🏻 {{currentUser?.CVsSentsAmount|| 'CVs Sents Amount'}}</a>
+                <a class="nav-link">👌🏻 {{currentUser?.cVsSentsAmount +' cvs' || 'CVs Sents Amount'}}</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link">👤 {{currentUser?.userName||'no connect' }}</a>

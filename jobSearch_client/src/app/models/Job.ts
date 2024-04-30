@@ -2,12 +2,12 @@
 import { Field } from "./Field";
 
 export interface Job{
-    Id:number;
-    JobName:string;
-    JobField:Field;
-    ScopeOfHours:number;
-    Requirements:string;
-    Area:string;
+    id:number;
+    jobName:string;
+    jobField:Field;
+    scopeOfHours:number;
+    requirements:string;
+    area:string;
     software:string;
-    WorkFromHome:boolean;
+    workFromHome:boolean;
 }

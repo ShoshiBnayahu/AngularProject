@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-position',
  
   templateUrl: './position.component.html',
-  styleUrl: './position.component.scss'
+  styleUrls: [ './position.component.scss']
 })
 export class PositionComponent {
 
