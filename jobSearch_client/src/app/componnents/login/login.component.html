@@ -1,14 +1,18 @@
-<form #f=ngForm>
+<form #f="ngForm" class="form-group">
     <div>
-        <label >שם משתמש</label>
-        <input  type="text" #name="ngModel" [(ngModel)]="userData.username" name="username" required="true" > 
-        <label  *ngIf="!name.valid && f.submitted" class="error">*יש להזין שם</label> 
+        <label>Username</label>
+        <input class="form-control" type="text" #name="ngModel" [(ngModel)]="userData.username" name="username" required="true">
+        <label *ngIf="!name.valid && f.submitted" class="error">*Please enter a username</label>
     </div>
-    <label ></label>
+    <label></label>
     <div>
-        <label>סיסמה</label>
-        <input type="password" #password="ngModel" [(ngModel)]="userData.password" name="password"  required="true" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}" >
-        <label  *ngIf="!password.valid&&f.submitted" class="error">הסיסמא חייב להכיל לפחות אות קטנה אחת, אות גדולה אחת ומספר אחד. 8 תווים</label> 
+        <label>Password</label>
+        <input class="form-control" type="password" #password="ngModel" [(ngModel)]="userData.password" name="password" required="true"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}">
+        <label *ngIf="!password.valid && f.submitted" class="error">The password must contain at least one lowercase letter, one uppercase letter, and one number. 8 characters</label>
     </div>
-    <button   type="submit" (click)="loginClick()">כניסה</button>
+    <button class="btn btn-primary" type="submit" (click)="loginClick()">Login</button>
 </form>
+
+
+  
