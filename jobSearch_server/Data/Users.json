@@ -1,16 +1,19 @@
 [{
     "Id": 0,
-    "UserName": "a",
-    "Password": "aaaaaaaa",
-    "JobSearchField": 0
+    "UserName": "shoshi",
+    "Password": "Sh123456",
+    "JobSearchField": 0,
+    "CVsSentsAmount":1
 }, {
     "Id": 1,
     "UserName": "b",
-    "Password": "bbbbbbbb",
-    "JobSearchField": 1
+    "Password": "Bb999999",
+    "JobSearchField": 1,
+    "CVsSentsAmount":0
 }, {
     "Id": 2,
     "UserName": "c",
-    "Password": "cccccccc",
-    "JobSearchField": 2
+    "Password": "Cc000000",
+    "JobSearchField": 2,
+    "CVsSentsAmount":2
 }]

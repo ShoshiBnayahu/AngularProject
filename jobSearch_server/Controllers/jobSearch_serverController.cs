@@ -54,7 +54,7 @@ public class JobSearchServerController : ControllerBase
     public ActionResult GetUser( string userName,string password)
     {      
        
-        User? user =usersList?.FirstOrDefault(u=>u?.UserName==userName && u?.Password==password);
+        User? user =usersList?.FirstOrDefault(u=>u?.userName==userName && u?.password==password);
         System.Console.WriteLine(   user);
         return Ok(user);
 
