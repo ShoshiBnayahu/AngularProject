@@ -10,6 +10,8 @@ import { PositionComponent } from './componnents/position/position.component';
 import { NotFoundComponent } from './componnents/not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PositionFilterComponent } from './componnents/position-filter/position-filter.component';
+import { PositionsPageComponent } from './componnents/positions-page/positions-page.component';
 
 
 
@@ -21,13 +23,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PositionListComponent,
     PositionComponent,
     PositionDetailsComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PositionFilterComponent,
+    PositionsPageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

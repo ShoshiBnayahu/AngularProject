@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Job } from 'src/app/models/Job';
 
 @Component({
   selector: 'app-position',
@@ -8,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class PositionComponent {
 
+@Input()
+job:Job |null = null;
 }

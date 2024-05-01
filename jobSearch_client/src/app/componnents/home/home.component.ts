@@ -18,26 +18,11 @@ export class HomeComponent {
 
   getField() {
     if (this.currentUser) {
-      console.log(this.currentUser.cVsSentsAmount);
       
       return Field[this.currentUser.jobSearchField].toLowerCase()
     }
-    return '';
-  }
-  positionOnclick() {
-    if (this.currentUser)
-      this.router.navigate([`positions/${this.getField()}`])
-    else {
-      alert('User not logged in! Please login! ')
-      this.router.navigate([`/login`])
-
-    }
-
+    return 'positions';
   }
 
 
-
-
-
-
-}
+  }

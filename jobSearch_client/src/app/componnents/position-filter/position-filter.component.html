@@ -1,0 +1,13 @@
+<form ngForm>
+    <label>job field</label>
+    <select type="text"  [(ngModel)]="field" name="field" >
+        <option selected>All</option>
+        <option *ngFor=" let field of fieldsList">{{field}}</option>
+    </select>
+    <label>job area</label>
+    <select type="text" [(ngModel)]="area" name="area"   >
+        <option selected>All</option>
+        <option *ngFor=" let area of areasList">{{area}}</option>
+    </select>
+    <button type="submit" (click)="filter()">search</button>
+</form>

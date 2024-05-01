@@ -1,7 +1,5 @@
-// import { course } from '../models/course';
 import {HttpClient} from '@angular/common/http'
 import { Injectable, Type } from '@angular/core';
-// import { type } from '../models/type';
 import { Observable, Observer } from 'rxjs';
 import {User} from '../models/User'
 @Injectable({

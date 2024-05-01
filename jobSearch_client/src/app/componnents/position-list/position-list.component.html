@@ -1,2 +1,3 @@
-<p>position-list works!</p>
-רשימת המשרות מורכבת מאוסף קומפוננטות של משרה.
+<div *ngFor="let job of jobList" >
+    <app-position  [job]="job"> </app-position>
+</div>

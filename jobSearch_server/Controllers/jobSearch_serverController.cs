@@ -42,7 +42,9 @@ public class JobSearchServerController : ControllerBase
         }
     }
 
-
+    private void saveToFile(){
+        System.IO.File.WriteAllText(usersPath,JsonSerializer.Serialize(usersList));
+    }
 
     [HttpGet("GetAllJobs")]
     public ActionResult GetAllJobs()
@@ -55,7 +57,18 @@ public class JobSearchServerController : ControllerBase
     {      
        
         User? user =usersList?.FirstOrDefault(u=>u?.userName==userName && u?.password==password);
-        System.Console.WriteLine(   user);
+        System.Console.WriteLine( user);
+        return Ok(user);
+
+    }
+
+    [HttpPost("updateCvsSents")]
+    public ActionResult updateCvsSents(int id )
+    {      
+        User? user =usersList?.FirstOrDefault(u=>u?.id==id);
+        user.cVsSentsAmount++;
+        saveToFile();
+        System.Console.WriteLine(user);
         return Ok(user);
 
     }
