@@ -1,4 +1,5 @@
 [{
+    "id":0,
     "JobName": "Assembler",
     "JobField": 1,
     "ScopeOfHours": 8,
@@ -7,6 +8,7 @@
     "WorkFromHome": true
 },
 {
+    "id":1,
     "JobName": "sql QA",
     "JobField": 2,
     "ScopeOfHours": 9,
@@ -15,8 +17,9 @@
     "WorkFromHome": false
 },
 {
+    "id":2,
     "JobName": "DB",
-    "JobField": 0,
+    "JobField": 3,
     "ScopeOfHours": 5,
     "Area": "Kefar Saba",
     "Requirements": "High interpersonal communication and punctuality",

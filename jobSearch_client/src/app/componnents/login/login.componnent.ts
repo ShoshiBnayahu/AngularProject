@@ -19,7 +19,7 @@ export class LoginComponent {
         res.password = 'secret';
         localStorage.setItem('user', JSON.stringify(res));
         alert(` ברוך הבא ${this.userData.username}!`);
-        this.router.navigate([`positions/${Field[res.jobSearchField]}`])
+        this.router.navigate([`positions/${Field[res.jobSearchField].toLowerCase()}`])
       }
       else {
         localStorage.setItem('user', '');

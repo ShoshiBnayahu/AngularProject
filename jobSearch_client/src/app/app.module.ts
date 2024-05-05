@@ -12,6 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PositionFilterComponent } from './componnents/position-filter/position-filter.component';
 import { PositionsPageComponent } from './componnents/positions-page/positions-page.component';
+import { HeaderComponent } from './componnents/header/header.component';
+import { FooterComponent } from './componnents/footer/footer.component';
+import { PositionsSentCVListComponent } from './componnents/positions-sent-cv-list/positions-sent-cv-list.component';
 
 
 
@@ -25,7 +28,10 @@ import { PositionsPageComponent } from './componnents/positions-page/positions-p
     PositionDetailsComponent,
     NotFoundComponent,
     PositionFilterComponent,
-    PositionsPageComponent
+    PositionsPageComponent,
+    HeaderComponent,
+    FooterComponent,
+    PositionsSentCVListComponent
   ],
   imports: [
     BrowserModule,

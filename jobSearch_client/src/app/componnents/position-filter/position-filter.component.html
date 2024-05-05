@@ -1,13 +1,17 @@
-<form ngForm>
-    <label>job field</label>
-    <select type="text"  [(ngModel)]="field" name="field" >
-        <option selected>All</option>
-        <option *ngFor=" let field of fieldsList">{{field}}</option>
-    </select>
-    <label>job area</label>
-    <select type="text" [(ngModel)]="area" name="area"   >
-        <option selected>All</option>
-        <option *ngFor=" let area of areasList">{{area}}</option>
-    </select>
-    <button type="submit" (click)="filter()">search</button>
+<form ngForm class="form-group">
+    <div>
+        <label>job field</label>
+        <select class="form-control" type="text" [(ngModel)]="field" name="field">
+            <option *ngFor=" let field of fieldsList " [selected]="field">{{field.toString().toLowerCase()}}</option>
+        </select>
+    </div>
+    <label></label>
+    <div>
+        <label>job area</label>
+        <select class="form-control" type="text" [(ngModel)]="area" name="area">
+            <option selected>all</option>
+            <option *ngFor=" let area of areasList">{{area}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" type="submit" (click)="filter()">search </button>
 </form>

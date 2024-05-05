@@ -9,20 +9,5 @@ import { Router } from "@angular/router"
 })
 
 export class HomeComponent {
-  constructor(private router: Router) {
-
-  }
-
-  isConnect: string | null = localStorage.getItem('user')
-  currentUser: User | null = this.isConnect ? JSON.parse(this.isConnect) : null
-
-  getField() {
-    if (this.currentUser) {
-      
-      return Field[this.currentUser.jobSearchField].toLowerCase()
-    }
-    return 'positions';
-  }
-
-
+  
   }

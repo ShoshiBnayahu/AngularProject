@@ -8,6 +8,5 @@ export interface Job{
     scopeOfHours:number;
     requirements:string;
     area:string;
-    software:string;
     workFromHome:boolean;
 }

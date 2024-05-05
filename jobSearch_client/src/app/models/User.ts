@@ -6,6 +6,7 @@ export interface User {
     password: string;
     jobSearchField: Field;
     cVsSentsAmount:number;
+    jobsSentCV:string[];
 
 }
 

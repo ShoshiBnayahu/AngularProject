@@ -3,31 +3,20 @@ using jobSearch_server.Models;
 using System.Text.Json;
 using System.IO;
 using System.Linq;
-namespace jobSearch_server.Controllers;
+namespace usersController.Controllers;
 
 [ApiController]
-[Route("[controller]")]
-public class JobSearchServerController : ControllerBase
+[Route("users")]
+public class usersController : ControllerBase
 {
 
     private IWebHostEnvironment webHost;
-    private string jobsPath;
-    private List<Job>? jobsList { get; }
     private string usersPath;
     private List<User>? usersList { get; }
-    public JobSearchServerController(IWebHostEnvironment webHost)
+    public usersController(IWebHostEnvironment webHost)
     {
         this.webHost = webHost;
-        this.jobsPath = Path.Combine(webHost.ContentRootPath, "Data", "Jobs.json");
         this.usersPath=Path.Combine(webHost.ContentRootPath, "Data", "Users.json");
-        using (var jsonFile =  System.IO.File.OpenText(jobsPath))
-        {
-            jobsList = JsonSerializer.Deserialize<List<Job>>(jsonFile.ReadToEnd(),
-            new JsonSerializerOptions
-            {
-                PropertyNameCaseInsensitive = true
-            });
-        }
         using (var jsonFile = System.IO.File.OpenText(usersPath))
         {
             usersList = JsonSerializer.Deserialize<List<User>>(jsonFile.ReadToEnd(),
@@ -36,22 +25,9 @@ public class JobSearchServerController : ControllerBase
                 PropertyNameCaseInsensitive = true
             });
         }
-        foreach (User item in usersList)
-        {
-            System.Console.WriteLine(item.ToString());
-        }
     }
 
-    private void saveToFile(){
-        System.IO.File.WriteAllText(usersPath,JsonSerializer.Serialize(usersList));
-    }
-
-    [HttpGet("GetAllJobs")]
-    public ActionResult GetAllJobs()
-    {
-        return Ok(jobsList);
-    }
-
+    
     [HttpGet("GetUserDetails")]
     public ActionResult GetUser( string userName,string password)
     {      
@@ -61,14 +37,29 @@ public class JobSearchServerController : ControllerBase
         return Ok(user);
 
     }
+     [HttpGet("GetUserById")]
+    public ActionResult GetUser( int id)
+    {      
+       
+        User? user =usersList?.FirstOrDefault(u=>u?.id==id);
+        return Ok(user);
 
-    [HttpPost("updateCvsSents")]
-    public ActionResult updateCvsSents(int id )
+    }
+
+    private void saveToFile(){
+        System.IO.File.WriteAllText(usersPath,JsonSerializer.Serialize(usersList));
+    }
+
+
+    [HttpPut("updateJobsSentCV")]
+    public ActionResult updateJobsSentCV(int id,string jobName )
     {      
         User? user =usersList?.FirstOrDefault(u=>u?.id==id);
+       if(user!=null){
+        user.jobsSentCV.Add(jobName);
         user.cVsSentsAmount++;
         saveToFile();
-        System.Console.WriteLine(user);
+       }
         return Ok(user);
 
     }

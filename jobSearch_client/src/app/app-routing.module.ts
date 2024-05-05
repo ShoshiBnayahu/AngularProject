@@ -9,12 +9,15 @@ import { PositionsPageComponent } from './componnents/positions-page/positions-p
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+
   {
-    path: 'positions/:field?', component: PositionsPageComponent, children: [
-      {
-        path: 'position', component: PositionComponent, children: [
-          { path: 'details', component: PositionDetailsComponent }]
-      }]
+    path: 'positions', component: PositionsPageComponent
+  }, {
+    path: 'positions/:field', component: PositionsPageComponent
+  },
+  {
+    path: ':positionId/details', component: PositionComponent
+    
   },
   { path: 'login', component: LoginComponent },
   { path: '**', component: NotFoundComponent },
