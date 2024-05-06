@@ -2,57 +2,50 @@ import { HttpClient } from '@angular/common/http'
 import { Injectable, Type } from '@angular/core';
 import { Job } from '../models/Job';
 import { Field } from '../models/Field';
-import { Observable } from 'rxjs';
+import { Observable, concatWith } from 'rxjs';
+import { loginService } from './login.service';
 @Injectable({
     providedIn: 'root'
 })
 
 export class positionService {
     constructor(private http: HttpClient) {
-        this.getJobsFromServer();
+
     }
 
-    jobsList: Job[] = []
+    // jobsList: Job[] = []
 
-    getJobsFromServer() {
-        this.http.get(`https://localhost:7193/jobs/GetAllJobs`).subscribe((res: any) => {
-            res.forEach((job: any) => {
-                this.jobsList.push(job)
-            })
-        });
+    getJobsFromServer(): Observable<Job[]> {
+        return this.http.get<Job[]>(`https://localhost:7193/jobs/GetAllJobs`)
     }
 
-    getJobFromServer(JobId: number): Observable<any> {
-        return this.http.get(`https://localhost:7193/jobs/GetJob?id=${JobId}`)
+    getJobFromServer(JobId: number): Observable<Job> {
+        return this.http.get<Job>(`https://localhost:7193/jobs/GetJob?id=${JobId}`)
     }
 
-    updateUserJobsSentCV(UserId: number,jobName:string): Observable<any> {
-        return this.http.put(`https://localhost:7193/users/updateJobsSentCV?id=${UserId}&jobName=${jobName}`,null)
+    updateUserJobsSentCV(UserId: number, jobName: string): Observable<any> {
+        return this.http.put(`https://localhost:7193/users/updateJobsSentCV?id=${UserId}&jobName=${jobName}`, null)
     }
 
-    filterJobs(field: string | undefined, area: string | null) {
-        console.log(field, area); 
-        let filterList = this.jobsList.filter(job => 
-            (field === undefined || (field === Field[Field.ALL].toLowerCase()) || Field[job.jobField].toLowerCase() === field) &&
-                (area === null || area === 'all' || job.area === area)
+    filterJobs(field: string, area: string) {
+        let filterList
+        return new Promise((resolve) =>
+            this.getJobsFromServer().subscribe(
+                (res: Job[]) => {
+                    filterList = res.filter(job =>
+                        (field === 'all' || Field[job.jobField].toLowerCase() === field) &&
+                        (area === 'all' || job.area === area)
+                    )
+                    resolve(filterList);
+                },
+            )
         )
-        console.log(this.getJobsList);
-        console.log(filterList);
-
-
-        return filterList
-        // return this.jobsList
     }
-
-    public get getJobsList() {
-        return this.jobsList
-    }
-
     getFields() {
         return Object.values(Field).filter(field => Number.isNaN(Number(field)));
     }
     getAreas() {
-        return this.http.get(`https://localhost:7193/jobs/GetAreas`) 
+        return this.http.get(`https://localhost:7193/jobs/GetAreas`)
     }
 }
 

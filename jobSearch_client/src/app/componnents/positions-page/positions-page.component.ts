@@ -12,25 +12,23 @@ import { positionService } from 'src/app/services/position.service';
 export class PositionsPageComponent implements OnInit {
   constructor(private positionSvc: positionService, private actRouter: ActivatedRoute, private router: Router) {
   }
-  jobsforView: Job[] = []
+  jobsforView: Job[] | any= []
   positionsSentCv: string[] = []
 
-  ngOnInit(): void {
-
+   ngOnInit(): void {
     if (localStorage.getItem('user') === null) {
       alert('User not logged in! Please log in! ')
       this.router.navigate([`/login`])
     }
     this.actRouter.params.subscribe(params => {
-      let field = params['field']
+      let field = params['field'] || 'all'
       console.log(field);
-      this.jobsforView = this.positionSvc.filterJobs(field, null);
+      this.positionSvc.filterJobs(field, 'all').then(res=>
+        this.jobsforView=res
+      )      
     }
     )
-    this.actRouter.url.subscribe(u =>
-      u.forEach(u2 => {
-        console.log(u2.path);
-      }))
+    
 
     this.positionsSentCv = JSON.parse(localStorage.getItem('user')!).jobsSentCV;
   }
@@ -39,7 +37,10 @@ export class PositionsPageComponent implements OnInit {
     let filterDetails = $event
     console.log(filterDetails);
 
-    this.jobsforView = this.positionSvc.filterJobs(filterDetails.field, filterDetails.area);
+    this.positionSvc.filterJobs(filterDetails.field, filterDetails.area).then(res=>
+      this.jobsforView=res
+    )   
+ 
   }
 
 }
