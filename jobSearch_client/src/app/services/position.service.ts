@@ -27,18 +27,20 @@ export class positionService {
     }
 
     updateUserJobsSentCV(UserId: number,jobName:string): Observable<any> {
-        return this.http.put(`https://localhost:7193/jobs/updateJobsSentCV?id=${UserId}&jobName=${jobName}`,null)
+        return this.http.put(`https://localhost:7193/users/updateJobsSentCV?id=${UserId}&jobName=${jobName}`,null)
     }
 
     filterJobs(field: string | undefined, area: string | null) {
         console.log(field, area); 
-        let filterList = this.jobsList.filter(job => 
-            (field === undefined || (field === Field[Field.ALL].toLowerCase()) || Field[job.jobField].toLowerCase() === field) &&
-                (area === null || area === 'all' || job.area === area)
-        )
-        console.log(filterList);
+        // let filterList = this.jobsList.filter(job => 
+        //     (field === undefined || (field === Field[Field.ALL].toLowerCase()) || Field[job.jobField].toLowerCase() === field) &&
+        //         (area === null || area === 'all' || job.area === area)
+        // )
+        // console.log(filterList);
+        // console.log(this.getJobsList);
 
-        return filterList
+        // return filterList
+        return this.jobsList
     }
 
     public get getJobsList() {

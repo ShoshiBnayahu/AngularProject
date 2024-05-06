@@ -9,7 +9,7 @@ import { positionService } from 'src/app/services/position.service';
 })
 export class PositionFilterComponent implements OnInit{
   constructor(private positionSVC: positionService) {
-
+   
   } 
 
   fieldsList :(string|Field) []=[]
@@ -17,6 +17,7 @@ export class PositionFilterComponent implements OnInit{
   areasList :(string) []=[]
   area:string = 'all'
 
+  
   ngOnInit(): void {
     this.fieldsList=this.positionSVC.getFields();
     this.positionSVC.getAreas().subscribe((res: any) => {

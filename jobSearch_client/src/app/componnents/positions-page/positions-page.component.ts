@@ -22,6 +22,7 @@ export class PositionsPageComponent implements OnInit{
       this.router.navigate([`/login`])
     }
 
+
     this.actRouter.params.subscribe(params=>
       {
         let field=params['field']
@@ -29,6 +30,10 @@ export class PositionsPageComponent implements OnInit{
         this.jobsforView=this.positionSvc.filterJobs(field,null);
       }
     ) 
+    this.actRouter.url.subscribe(u =>
+      u.forEach(u2 => { console.log(u2.path);
+       }))
+    
   
     this.positionsSentCv=JSON.parse(localStorage.getItem('user')!).jobsSentCV;
   }

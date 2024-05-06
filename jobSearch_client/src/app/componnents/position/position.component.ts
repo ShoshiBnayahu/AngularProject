@@ -22,7 +22,6 @@ export class PositionComponent implements OnInit {
     this.actRouter.url.subscribe(u =>
       u.forEach(u2 => { if (u2.path.indexOf('details') >= 0) this.details = true }))
     if (this.details) {
-
       this.actRouter.params.subscribe(params => {
         let positionId = params['positionId']
         this.positionSVC.getJobFromServer(positionId).subscribe((res: any) => {

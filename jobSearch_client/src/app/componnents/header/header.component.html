@@ -8,17 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <button class="nav-link" [routerLink]="'/positions/'+getField()" >🎯 {{getField() }}</button>
+                <button class="nav-link" [routerLink]="'/positions/'+getField()">🎯 {{getField() }}</button>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link">👌🏻 {{currentUser?.cVsSentsAmount }} CVs Sents </a>
             </li>
-            
+
             <li class="nav-item">
-                <a class="nav-link" >👤 {{currentUser?.userName||'no connect' }}</a>
+                <a class="nav-link">👤 {{currentUser?.userName||'no connect' }}</a>
             </li>
         </ul>
     </div>
 </nav>
-
