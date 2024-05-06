@@ -2,7 +2,7 @@
     <div>
         <label>job field</label>
         <select class="form-control" type="text" [(ngModel)]="field" name="field">
-            <option *ngFor=" let field of fieldsList " [selected]="field">{{field.toString().toLowerCase()}}</option>
+            <option *ngFor=" let field of fieldsList " [selected]="field">{{field.toString() | lowercase}}</option>
         </select>
     </div>
     <label></label>

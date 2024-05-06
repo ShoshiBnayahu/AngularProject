@@ -32,15 +32,16 @@ export class positionService {
 
     filterJobs(field: string | undefined, area: string | null) {
         console.log(field, area); 
-        // let filterList = this.jobsList.filter(job => 
-        //     (field === undefined || (field === Field[Field.ALL].toLowerCase()) || Field[job.jobField].toLowerCase() === field) &&
-        //         (area === null || area === 'all' || job.area === area)
-        // )
-        // console.log(filterList);
-        // console.log(this.getJobsList);
+        let filterList = this.jobsList.filter(job => 
+            (field === undefined || (field === Field[Field.ALL].toLowerCase()) || Field[job.jobField].toLowerCase() === field) &&
+                (area === null || area === 'all' || job.area === area)
+        )
+        console.log(this.getJobsList);
+        console.log(filterList);
 
-        // return filterList
-        return this.jobsList
+
+        return filterList
+        // return this.jobsList
     }
 
     public get getJobsList() {

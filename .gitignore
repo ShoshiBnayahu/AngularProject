@@ -62,6 +62,7 @@ yarn-error.log
 
 # Miscellaneous
 
+
 .sass-cache/
 /connect.lock
 /coverage
