@@ -38,6 +38,7 @@ msbuild.wrn
 /bazel-out
 
 # Node
+.angular/cache/
 node_modules/
 npm-debug.log
 yarn-error.log
@@ -60,7 +61,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-.angular/cache
+
 .sass-cache/
 /connect.lock
 /coverage
