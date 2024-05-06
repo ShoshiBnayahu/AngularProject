@@ -15,7 +15,7 @@ import { PositionsPageComponent } from './componnents/positions-page/positions-p
 import { HeaderComponent } from './componnents/header/header.component';
 import { FooterComponent } from './componnents/footer/footer.component';
 import { PositionsSentCVListComponent } from './componnents/positions-sent-cv-list/positions-sent-cv-list.component';
-
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -31,7 +31,8 @@ import { PositionsSentCVListComponent } from './componnents/positions-sent-cv-li
     PositionsPageComponent,
     HeaderComponent,
     FooterComponent,
-    PositionsSentCVListComponent
+    PositionsSentCVListComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

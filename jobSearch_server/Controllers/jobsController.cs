@@ -7,13 +7,13 @@ namespace jobsControllers.Controllers;
 
 [ApiController]
 [Route("jobs")]
-public class jobsControllers : ControllerBase
+public class jobsController : ControllerBase
 {
 
     private IWebHostEnvironment webHost;
     private string jobsPath;
     private List<Job>? jobsList { get; }
-    public jobsControllers(IWebHostEnvironment webHost)
+    public jobsController(IWebHostEnvironment webHost)
     {
         this.webHost = webHost;
         this.jobsPath = Path.Combine(webHost.ContentRootPath, "Data", "Jobs.json");
