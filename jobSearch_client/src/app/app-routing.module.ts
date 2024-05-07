@@ -8,17 +8,20 @@ import { PositionComponent } from './componnents/position/position.component';
 import { PositionsPageComponent } from './componnents/positions-page/positions-page.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  {
+    path: '', component: HomeComponent, children: [
+      {
+        path: 'positions', component: PositionsPageComponent
+      }, {
+        path: 'positions/:field', component: PositionsPageComponent
+      },
+      {
+        path: ':positionId/details', component: PositionComponent
 
-  {
-    path: 'positions', component: PositionsPageComponent
-  }, {
-    path: 'positions/:field', component: PositionsPageComponent
+      }
+    ]
   },
-  {
-    path: ':positionId/details', component: PositionComponent
-    
-  },
+
   { path: 'login', component: LoginComponent },
   { path: '**', component: NotFoundComponent },
 ];
