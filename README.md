@@ -1,6 +1,6 @@
 # Job Search Website
 
-Welcome to our job search platform, designed with Angular for the client side and .NET Core for the server side. This project provides a fast and efficient way to search for job opportunities based on specialty and location preferences.
+This project is a job search platform that provides users with an efficient way to search for job opportunities based on their specialty and location preferences. Developed using Angular for the client-side and .NET Core for the server-side, the platform offers a seamless experience for job seekers.
 
 ## Features
 - **Specialty-based Search**: Quickly find job opportunities based on your field of expertise or specialization.
