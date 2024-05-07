@@ -16,6 +16,7 @@ import { HeaderComponent } from './componnents/header/header.component';
 import { FooterComponent } from './componnents/footer/footer.component';
 import { PositionsSentCVListComponent } from './componnents/positions-sent-cv-list/positions-sent-cv-list.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { WellcomeComponent } from './componnents/wellcome/wellcome.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     HeaderComponent,
     FooterComponent,
     PositionsSentCVListComponent,
-    HighlightDirective
+    HighlightDirective,
+    WellcomeComponent,
   ],
   imports: [
     BrowserModule,

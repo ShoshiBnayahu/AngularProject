@@ -1,1 +1,88 @@
-[{"id":0,"userName":"shoshi","password":"Sh123456","jobSearchField":3,"cVsSentsAmount":13,"jobsSentCV":["Assembler","Assembler","sql QA","DB","DB","Assembler","Assembler","Assembler","DB","Assembler","Assembler","Assembler","sql QA"]},{"id":1,"userName":"b","password":"Bb999999","jobSearchField":1,"cVsSentsAmount":8,"jobsSentCV":["DB","Assembler","Assembler","Assembler","sql QA","Assembler","Assembler","Assembler"]},{"id":2,"userName":"c","password":"Cc000000","jobSearchField":2,"cVsSentsAmount":0,"jobsSentCV":[]}]
+[
+    {
+        "id": 0,
+        "userName": "Shoshi",
+        "password": "Sh123456",
+        "jobSearchField": 1,
+        "cVsSentsAmount": 29,
+        "jobsSentCV": [
+            "Backend Developer",
+            "matrix"
+        ]
+    },
+    {
+        "id": 1,
+        "userName": "UserOne",
+        "password": "TestP@ss",
+        "jobSearchField": 5,
+        "cVsSentsAmount": 8,
+        "jobsSentCV": []
+    },
+    {
+        "id": 2,
+        "userName": "JohnDoe",
+        "password": "SecureP@ss",
+        "jobSearchField": 33,
+        "cVsSentsAmount": 0,
+        "jobsSentCV": []
+    },
+    {
+        "id": 3,
+        "userName": "AliceSmith",
+        "password": "P@ssw0rd",
+        "jobSearchField": 91,
+        "cVsSentsAmount": 22,
+        "jobsSentCV": []
+    },
+    {
+        "id": 4,
+        "userName": "UserFive",
+        "password": "P@ssw0rd",
+        "jobSearchField": 15,
+        "cVsSentsAmount": 10,
+        "jobsSentCV": []
+    },
+    {
+        "id": 5,
+        "userName": "Mike123",
+        "password": "StrongP@ssword",
+        "jobSearchField": 62,
+        "cVsSentsAmount": 3,
+        "jobsSentCV": []
+    },
+    {
+        "id": 6,
+        "userName": "JaneDoe",
+        "password": "Pa$$w0rd",
+        "jobSearchField": 41,
+        "cVsSentsAmount": 6,
+        "jobsSentCV": []
+    },
+    {
+        "id": 7,
+        "userName": "Admin123",
+        "password": "Passw0rd!",
+        "jobSearchField": 88,
+        "cVsSentsAmount": 17,
+        "jobsSentCV": []
+    },
+    {
+        "id": 8,
+        "userName": "UserEight",
+        "password": "Passw0rd",
+        "jobSearchField": 27,
+        "cVsSentsAmount": 12,
+        "jobsSentCV": []
+    },
+    {
+        "id": 9,
+        "userName": "EmilySmith",
+        "password": "P@ssw0rd",
+        "jobSearchField": 50,
+        "cVsSentsAmount": 7,
+        "jobsSentCV": [
+            "matrix",
+            "matrix"
+        ]
+    }
+]

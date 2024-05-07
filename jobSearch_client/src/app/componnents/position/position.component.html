@@ -1,12 +1,16 @@
-<div>
-    <h1 appHighlight>{{job?.jobName}}</h1>
-    <h2>{{getField()}}</h2>
-    <p>scope of hours: {{job?.scopeOfHours}}</p>
-    <p>area: {{job?.area}}</p>
-    <app-position-details *ngIf="details"
-        [jobDetails]="{requirements:job?.requirements,workFromHome:job?.workFromHome}">
-    </app-position-details>
-    <button *ngIf="!details" [routerLink]="'/'+job?.id+'/details'"> more details </button>
-    <button *ngIf="details" (click)="sendCvClick()">send CV</button>
-</div>
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-body">
+            <h1 class="card-title" appHighlight>{{job?.jobName}}</h1>
+            <h2 class="card-subtitle mb-3">{{getField()}}</h2>
+            <p class="card-text">Scope of hours: {{job?.scopeOfHours}}</p>
+            <p class="card-text">Area: {{job?.area}}</p>
+            <app-position-details *ngIf="details"
+                [jobDetails]="{requirements:job?.requirements,workFromHome:job?.workFromHome}">
+            </app-position-details>
 
+            <button *ngIf="!details" [routerLink]="'/'+job?.id+'/details'" class="btn btn-primary">More details</button>
+            <button *ngIf="details" (click)="sendCvClick()" class="btn btn-success">Send CV</button>
+        </div>
+    </div>
+</div>

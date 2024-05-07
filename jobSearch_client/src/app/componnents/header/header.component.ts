@@ -1,24 +1,28 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { Field } from 'src/app/models/Field';
-import { User } from 'src/app/models/User';
+import { Component } from '@angular/core'; // Importing necessary modules and dependencies
+import { Router } from '@angular/router'; // For routing functionality
+import { Field } from 'src/app/models/Field'; // Importing Field model
+import { User } from 'src/app/models/User'; // Importing User model
+import 'jquery';
+import 'bootstrap';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-header', // Component selector
+  templateUrl: './header.component.html', // Template URL
+  styleUrls: ['./header.component.scss'] // Styles URL
 })
-export class HeaderComponent {
-  constructor(private router: Router) {
+export class HeaderComponent { // Component class implementation
+  
+  constructor(private router: Router) { // Constructor with dependency injection for Router
   }
 
-  isConnect: string | null = localStorage.getItem('user')
-  currentUser: User | null = this.isConnect ? JSON.parse(this.isConnect) : null
+  isConnect: string | null = localStorage.getItem('user'); // Variable to store user connection status retrieved from local storage
+  currentUser: User | null = this.isConnect ? JSON.parse(this.isConnect) : null; // Variable to store current user details, parsed from JSON string
+  
+  active:string|null=""; // Variable to store active state (not used in provided code)
 
-  active:string|null=""
-  getField() {
-    if (this.currentUser)
-      return Field[this.currentUser.jobSearchField].toLowerCase()
-    return 'positions';
+  getField() { // Method to get user's job search field
+    if (this.currentUser) // If current user details exist
+      return Field[this.currentUser.jobSearchField].toLowerCase(); // Return user's job search field in lowercase
+    return 'positions'; // Return 'positions' if current user details are null
   }
 }

@@ -1,28 +1,164 @@
-[{
-    "id":0,
-    "JobName": "Assembler",
-    "JobField": 1,
-    "ScopeOfHours": 8,
-    "Area": "Jerusalem",
-    "Requirements": "High work ethic, investment and dedication",
-    "WorkFromHome": true
-},
-{
-    "id":1,
-    "JobName": "sql QA",
-    "JobField": 2,
-    "ScopeOfHours": 9,
-    "Area": "Rannana",
-    "Requirements": "Skilled, at least 3 years of experience",
-    "WorkFromHome": false
-},
-{
-    "id":2,
-    "JobName": "DB",
-    "JobField": 3,
-    "ScopeOfHours": 5,
-    "Area": "Kefar Saba",
-    "Requirements": "High interpersonal communication and punctuality",
-    "WorkFromHome": false
-}
+[
+    {
+        "id": 0,
+        "JobName": "matrix",
+        "JobField": 1,
+        "ScopeOfHours": 8,
+        "Area": "Jerusalem",
+        "Requirements": "High work ethic, investment and dedication",
+        "WorkFromHome": true
+    },
+    {
+        "id": 1,
+        "JobName": " QA",
+        "JobField": 2,
+        "ScopeOfHours": 9,
+        "Area": "Rannana",
+        "Requirements": "Skilled, at least 3 years of experience",
+        "WorkFromHome": false
+    },
+    {
+        "id": 2,
+        "JobName": "DB",
+        "JobField": 3,
+        "ScopeOfHours": 5,
+        "Area": "Kefar Saba",
+        "Requirements": "High interpersonal communication and punctuality",
+        "WorkFromHome": false
+    },
+    {
+        "id": 3,
+        "JobName": "Data Scientist",
+        "JobField": 57,
+        "ScopeOfHours": 9,
+        "Area": "New York",
+        "Requirements": "Master's degree or PhD in Computer Science, Statistics, Mathematics, or related field, strong proficiency in programming languages such as Python, R, or SQL, experience with machine learning algorithms and statistical modeling, ability to work with big data and data visualization tools",
+        "WorkFromHome": false
+    },
+    {
+        "id": 4,
+        "JobName": "Digital Marketing Specialist",
+        "JobField": 49,
+        "ScopeOfHours": 8,
+        "Area": "Los Angeles",
+        "Requirements": "Bachelor's degree in Marketing, Communications, or related field, proven experience in digital marketing campaigns, proficiency in social media platforms and advertising tools, analytical skills to track and optimize campaign performance, creativity and attention to detail",
+        "WorkFromHome": true
+    },
+    {
+        "id": 5,
+        "JobName": "Civil Engineer",
+        "JobField": 61,
+        "ScopeOfHours": 8,
+        "Area": "Chicago",
+        "Requirements": "Bachelor's degree in Civil Engineering or related field, professional engineering license (PE) preferred, experience with CAD software and civil engineering design principles, strong communication and project management skills, ability to work in a team environment",
+        "WorkFromHome": false
+    },
+    {
+        "id": 6,
+        "JobName": "Nurse Practitioner",
+        "JobField": 93,
+        "ScopeOfHours": 10,
+        "Area": "Houston",
+        "Requirements": "Master's degree in Nursing, certification as a Nurse Practitioner (NP), experience in primary or specialty care setting, strong clinical assessment and diagnostic skills, ability to work independently and collaboratively with healthcare team",
+        "WorkFromHome": false
+    },
+    {
+        "id": 7,
+        "JobName": "Legal Assistant",
+        "JobField": 40,
+        "ScopeOfHours": 8,
+        "Area": "Washington, D.C.",
+        "Requirements": "Associate's degree in Paralegal Studies or related field, experience working in a law firm or legal department, knowledge of legal terminology and procedures, proficiency in legal research and document preparation, strong organizational and multitasking skills",
+        "WorkFromHome": true
+    },
+    {
+        "id": 9,
+        "JobName": "Marketing Director",
+        "JobField": 26,
+        "ScopeOfHours": 9,
+        "Area": "San Francisco",
+        "Requirements": "Bachelor's degree in Marketing or related field, proven experience in marketing management, strategic planning, and budgeting, strong leadership and communication skills, ability to analyze market trends and consumer behavior",
+        "WorkFromHome": false
+    },
+    {
+        "id": 10,
+        "JobName": "Financial Analyst",
+        "JobField": 37,
+        "ScopeOfHours": 8,
+        "Area": "London",
+        "Requirements": "Bachelor's degree in Finance, Accounting, or related field, proficiency in financial modeling and analysis, experience with financial reporting and forecasting, strong attention to detail and analytical skills",
+        "WorkFromHome": true
+    },
+    {
+        "id": 11,
+        "JobName": "Human Resources Manager",
+        "JobField": 9,
+        "ScopeOfHours": 8,
+        "Area": "Berlin",
+        "Requirements": "Bachelor's degree in Human Resources or related field, proven experience in HR management, recruitment, and employee relations, knowledge of labor laws and regulations, strong interpersonal and leadership skills",
+        "WorkFromHome": false
+    },
+    {
+        "id": 12,
+        "JobName": "Mobile App Developer",
+        "JobField": 64,
+        "ScopeOfHours": 9,
+        "Area": "Tokyo",
+        "Requirements": "Bachelor's degree in Computer Science or related field, experience in mobile application development for iOS and/or Android platforms, proficiency in programming languages such as Swift, Kotlin, or Java, understanding of mobile UI/UX principles",
+        "WorkFromHome": true
+    },
+    {
+        "id": 13,
+        "JobName": "Game Developer",
+        "JobField": 65,
+        "ScopeOfHours": 8,
+        "Area": "Seoul",
+        "Requirements": "Bachelor's degree in Game Design, Computer Science, or related field, experience in game development using game engines such as Unity or Unreal Engine, proficiency in programming languages such as C# or C++, strong problem-solving skills",
+        "WorkFromHome": true
+    },
+    {
+        "id": 14,
+        "JobName": "Network Engineer",
+        "JobField": 66,
+        "ScopeOfHours": 8,
+        "Area": "Sydney",
+        "Requirements": "Bachelor's degree in Computer Science, Information Technology, or related field, experience in designing, implementing, and maintaining computer networks, proficiency in network protocols and technologies, such as TCP/IP, DNS, DHCP, VPN",
+        "WorkFromHome": false
+    },
+    {
+        "id": 15,
+        "JobName": "Senior Software Engineer",
+        "JobField": 1,
+        "ScopeOfHours": 9,
+        "Area": "Tel Aviv",
+        "Requirements": "Bachelor's degree in Computer Science or related field, minimum of 5 years of experience in software development, expertise in programming languages such as Java, Python, or C++, experience with system architecture and design, leadership and mentoring skills",
+        "WorkFromHome": true
+    },
+    {
+        "id": 16,
+        "JobName": "Frontend Developer",
+        "JobField": 1,
+        "ScopeOfHours": 8,
+        "Area": "Haifa",
+        "Requirements": "Bachelor's degree in Computer Science or related field, proficiency in HTML, CSS, and JavaScript, experience with frontend frameworks such as React or Angular, understanding of responsive design principles, collaboration skills with UI/UX designers",
+        "WorkFromHome": true
+    },
+    {
+        "id": 17,
+        "JobName": "Backend Developer",
+        "JobField": 1,
+        "ScopeOfHours": 8,
+        "Area": "Jerusalem",
+        "Requirements": "Bachelor's degree in Computer Science or related field, proficiency in server-side programming languages such as Java, Python, or Node.js, experience with relational and NoSQL databases, knowledge of RESTful API design principles, problem-solving and debugging skills",
+        "WorkFromHome": true
+    },
+    {
+        "id": 18,
+        "JobName": "DevOps Engineer",
+        "JobField": 1,
+        "ScopeOfHours": 8,
+        "Area": "Tel Aviv",
+        "Requirements": "Bachelor's degree in Computer Science or related field, experience in cloud computing platforms such as AWS or Azure, proficiency in scripting languages such as Bash or Python, familiarity with containerization tools like Docker, automation and CI/CD pipelines experience",
+        "WorkFromHome": true
+    }
 ]

@@ -1,23 +1,51 @@
-<!-- header -->
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title for the document -->
+    <title>JobSearch</title>
+    <!-- Bootstrap library -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" [routerLink]="'/login'" style="font-style: italic ;">JobSearch🎯</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- Brand/logo with router link to login -->
+    <a class="navbar-brand" [routerLink]="'/login'" style="font-style: italic;">JobSearch🎯</a>
+    <!-- Button for responsive navigation menu -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
+    <!-- Navigation links -->
     <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
+            <!-- Button for navigating to positions page -->
             <li class="nav-item">
                 <button class="nav-link" [routerLink]="'/positions/'+getField()">🎯 {{getField() }}</button>
             </li>
-
+            <!-- Displaying number of CVs sent -->
             <li class="nav-item">
-                <a class="nav-link">👌🏻 {{currentUser?.cVsSentsAmount }} CVs Sents </a>
+                <a class="nav-link">👌🏻 {{currentUser?.cVsSentsAmount }} CVs Sents</a>
             </li>
-
+            <!-- Displaying current user's name or a default message -->
             <li class="nav-item">
                 <a class="nav-link">👤 {{currentUser?.userName||'no connect' }}</a>
             </li>
         </ul>
     </div>
 </nav>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Popper.js library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<!-- Bootstrap JavaScript library -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,6 +1,12 @@
-<!-- <app-header></app-header> -->
-<app-position-list [jobList]="jobsforView"   ></app-position-list>
-<app-position-filter  (filterChange)="filterChange($event)"></app-position-filter>
-<app-positions-sent-cv-list [positionsSentCv]="positionsSentCv"></app-positions-sent-cv-list>
-<!-- <app-footer></app-footer> -->
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8">
+            <app-position-filter (filterChange)="filterChange($event)"></app-position-filter>
+            <app-position-list [jobList]="jobsforView"></app-position-list>
+        </div>
+        <div class="col-lg-4">
+            <app-positions-sent-cv-list [positionsSentCv]="positionsSentCv"></app-positions-sent-cv-list>
+        </div>
+    </div>
+</div>

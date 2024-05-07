@@ -1,18 +1,20 @@
-<form #f="ngForm" class="form-group">
-    <div>
-        <label>Username</label>
-        <input class="form-control" type="text" #name="ngModel" [(ngModel)]="userData.username" name="username" required="true">
-        <label *ngIf="!name.valid && f.submitted" class="error">*Please enter a username</label>
-    </div>
-    <label></label>
-    <div>
-        <label>Password</label>
-        <input class="form-control" type="password" #password="ngModel" [(ngModel)]="userData.password" name="password" required="true"
-            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}">
-        <label *ngIf="!password.valid && f.submitted" class="error">The password must contain at least one lowercase letter, one uppercase letter, and one number. 8 characters</label>
-    </div>
-    <button class="btn btn-primary" type="submit" (click)="loginClick()">Login</button>
-</form>
 
+<div id="my-page">
+    <form #f="ngForm" class="form-group">
+        <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input id="username" class="form-control" type="text" #name="ngModel" [(ngModel)]="userData.username"
+                name="username" required>
+            <div *ngIf="!name.valid && f.submitted" class="text-danger">Please enter a username</div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input id="password" class="form-control" type="password" #password="ngModel"
+                [(ngModel)]="userData.password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,8}">
+            <div *ngIf="!password.valid && f.submitted" class="text-danger">The password must contain at least one
+                lowercase letter, one uppercase letter, and one number. 8 characters</div>
+        </div>
+        <button class="btn btn-primary" type="submit" (click)="loginClick()">Login</button>
+    </form>
 
-  
+</div>
